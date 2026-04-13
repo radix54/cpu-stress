@@ -1,4 +1,4 @@
-<a href="https://github.com/ozneroL541/CPU_Stress/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ozneroL541/CPU_Stress?color=2b9348" alt="License"/></a>
+<a href="https://github.com/ozneroL541/cpu-stress/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ozneroL541/cpu-stress?color=2b9348" alt="License"/></a>
 
 # CPU_Stress
 Program to stress the CPU.
@@ -13,12 +13,12 @@ Program to stress the CPU.
  - [License](#license)
 
 ## Description
-This program is based on the simulation program [Join_Blocks_Alg](#https://github.com/ozneroL541/Join_Blocks_Alg.git).
+This program is based on the simulation program [Join_Blocks_Alg](#https://github.com/ozneroL541/join-blocks-alg.git).
 
 ## Download
 Download the source code from Github
 
-    git clone https://github.com/ozneroL541/CPU_Stress.git
+    git clone https://github.com/ozneroL541/cpu-stress.git
 
 ## Compilation
 ### Requirements
