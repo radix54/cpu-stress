@@ -4,6 +4,9 @@ on:
   release:
     types: [created]
 
+permissions:
+  contents: write
+
 jobs:
   build_linux:
 
@@ -35,8 +38,15 @@ jobs:
     - name: Export Artifacts
       uses: actions/upload-artifact@v7
       with:
-        name: cpu_stress
+        name: cpu_stress-linux
         path: bin/*
+
+    - name: Attach executable to release
+      run: |
+        cp bin/cpu_stress bin/cpu_stress-linux
+        gh release upload "${{ github.event.release.tag_name }}" bin/cpu_stress-linux --clobber
+      env:
+        GH_TOKEN: ${{ github.token }}
 
   build_windows:
     runs-on: windows-latest
@@ -59,6 +69,19 @@ jobs:
     - name: Export Artifacts
       uses: actions/upload-artifact@v7
       with:
-        name: cpu_stress
+        name: cpu_stress-windows
         path: bin\*
 
+    - name: Attach executable to release
+      shell: pwsh
+      run: |
+        $executable = Get-ChildItem bin\cpu_stress* -File |
+          Where-Object { $_.Name -notlike '*-windows.exe' } |
+          Select-Object -First 1
+        if ($null -eq $executable) {
+          throw 'The Windows executable was not produced.'
+        }
+        Copy-Item $executable.FullName bin\cpu_stress-windows.exe
+        gh release upload "${{ github.event.release.tag_name }}" bin\cpu_stress-windows.exe --clobber
+      env:
+        GH_TOKEN: ${{ github.token }}
