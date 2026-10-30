@@ -1,4 +1,4 @@
-<a href="https://github.com/ozneroL541/cpu-stress/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ozneroL541/cpu-stress?color=2b9348" alt="License"/></a>
+<a href="https://github.com/radix54/cpu-stress/blob/master/LICENSE"><img src="https://img.shields.io/github/license/radix54/cpu-stress?color=2b9348" alt="License"/></a>
 
 # CPU_Stress
 Program to stress the CPU.
@@ -13,12 +13,12 @@ Program to stress the CPU.
  - [License](#license)
 
 ## Description
-This program is based on the simulation program [Join_Blocks_Alg](#https://github.com/ozneroL541/join-blocks-alg.git).
+This program is based on the simulation program [Join_Blocks_Alg](#https://github.com/radix54/join-blocks-alg.git).
 
 ## Download
 Download the source code from Github
 
-    git clone https://github.com/ozneroL541/cpu-stress.git
+    git clone https://github.com/radix54/cpu-stress.git
 
 ## Compilation
 ### Requirements
@@ -46,7 +46,7 @@ To document this software use:
     doxygen docfile
 
 ## Author
-- Radice Lorenzo @ozneroL541
+- Radice Lorenzo @radix54
 
 ## License
 CPU_Stress is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
